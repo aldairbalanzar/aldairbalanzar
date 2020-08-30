@@ -1,0 +1,67 @@
+.App {
+    div {
+
+        div {
+            div {
+                top: 0;
+                left: 0;
+                width: 4%;
+                height: 100vh;
+                background-color: mediumaquamarine;
+                padding: 4% 2% 4% 3%;
+                .hamburger {
+                    font-size: 2rem;
+                    color: white;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10%;
+            height: 100vh;
+            background-color: mediumaquamarine;
+            padding: 4% 3%;
+            div {
+                i {
+                    font-size: 2rem;
+                    color: white;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                .nav-icon-container {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 20% 0;
+                    .nav-icon {
+                        width: 40%;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            li {
+                padding: 10% 0;
+                margin: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                a {
+                    color: white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
