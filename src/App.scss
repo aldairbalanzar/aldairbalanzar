@@ -1,66 +1,60 @@
 .App {
-    div {
 
-        div {
-            div {
-                top: 0;
-                left: 0;
-                width: 4%;
-                height: 100vh;
-                background-color: mediumaquamarine;
-                padding: 4% 2% 4% 3%;
-                .hamburger {
-                    font-size: 2rem;
-                    color: white;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
+    .menu-container {
+        border: solid 2px red;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100vh;
+        background-color: mediumaquamarine;
+
+        .menu-bars {
+            font-size: 2rem;
+            color: white;
+            margin: 0 0 0 12px;
+            padding: 6px;
+            border: solid 2px yellow;
+            &:hover {
+                cursor: pointer;
             }
         }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 10%;
-            height: 100vh;
-            background-color: mediumaquamarine;
-            padding: 4% 3%;
-            div {
-                i {
-                    font-size: 2rem;
-                    color: white;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
+        .menu-times {
+            font-size: 2rem;
+            color: white;
+            margin: 0 0 0 12px;
+            padding: 6px;
+            border: solid 2px yellow;
+            &:hover {
+                cursor: pointer;
             }
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                .nav-icon-container {
-                    display: flex;
-                    justify-content: space-around;
-                    padding: 20% 0;
-                    .nav-icon {
-                        width: 40%;
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 10%;
+            margin: 0;
+
             li {
-                padding: 10% 0;
+                padding: 4% 0 8%;
                 margin: 0;
                 &:hover {
                     cursor: pointer;
                 }
+                
                 a {
+                    text-decoration: none;
                     color: white;
                     font-size: 2rem;
                 }
+            }
+
+            i {
+                font-size: 2rem;
+                color: white;
+                padding: 5% 3%;
+                margin: 20% 0;
+                border: solid 2px tomato
+
             }
         }
     }
