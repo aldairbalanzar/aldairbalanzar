@@ -1,4 +1,6 @@
 .App {
+    display: flex;
+    justify-content: space-between;
 
     .menu-container {
         border: solid 2px red;
@@ -55,6 +57,28 @@
                 margin: 20% 0;
                 border: solid 2px tomato
 
+            }
+        }
+    }
+
+    .carousel {
+        width: 80%;
+        display: flex;
+        border: solid 2px purple;
+
+        .arrow {
+            font-size: 4rem;
+            padding: 5%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .project {
+            a {
+                img {
+                    width: 70%;
+                    height: 200px;
+                }
             }
         }
     }
