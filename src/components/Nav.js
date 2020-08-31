@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Nav = () => {
 
@@ -34,7 +34,7 @@ const Nav = () => {
                 style={{overflow: 'hidden'}}
                 initial={{x: -30}}
                 animate={isNavOpen ? 'barsHide' : 'barsDisplay'}
-                transition={{ duration: .5 }}
+                transition={{ duration: .3 }}
                 ></motion.i>
             }
             
@@ -46,7 +46,7 @@ const Nav = () => {
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: .5 }}
+                    transition={{ duration: .6 }}
                     ></motion.i>
 
                     <motion.ul
@@ -54,7 +54,7 @@ const Nav = () => {
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: .5 }}
+                    transition={{ duration: .6 }}
                     >
                         <li><a href="">Projects</a></li>
                         <li><a href="">About Me</a></li>
