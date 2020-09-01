@@ -32,6 +32,7 @@
         }
 
         ul {
+            opacity: 0;
             list-style: none;
             padding: 10%;
             margin: 0;
@@ -74,6 +75,8 @@
             }
         }
         .project {
+            // opacity: 0;
+            // display: none;
             a {
                 img {
                     width: 70%;

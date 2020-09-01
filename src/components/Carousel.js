@@ -23,8 +23,8 @@ const Carousel = () => {
     }
     
     const variants = {
-        projectDisplay: { opacity: 1, x: 0 },
-        projectHide: { opacity: 0, x: -100 },
+        projectDisplay: { opacity: [0, 0.5, 1], x: [-100, -50, 0], display: ['none', 'block', 'block'] },
+        projectHide: { opacity: [1, 0.5, 0], x: [0, -50, 100], display: ['block', 'none', 'none'] },
     }
 
     useEffect(() => {
