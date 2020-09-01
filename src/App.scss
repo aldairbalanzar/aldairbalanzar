@@ -32,6 +32,7 @@
         }
 
         ul {
+            opacity: 0;
             list-style: none;
             padding: 10%;
             margin: 0%;
@@ -86,6 +87,13 @@
                 transform: scale(1.05);
                 box-shadow: 10px 8px 5px rgba(28, 38, 73, 0.225);
             }
+<<<<<<< HEAD
+=======
+        }
+        .project {
+            // opacity: 0;
+            // display: none;
+>>>>>>> bf0be4723b0f3c08fc50bb22f027229e2ad0249d
             a {
                 img {
                     width: 100%;
