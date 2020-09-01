@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Nav = () => {
+const Nav = ({changeNav}) => {
 
-    const [isNavOpen, setIsNavOpen] = useState(false)
+    const [isNavOpen, setIsNavOpen] = useState(false);
 
     const handleNav = () => {
         setIsNavOpen(!isNavOpen)
-        console.log(`isNavOpen ${isNavOpen}`)
-    }
+    };
 
     const variants = {
-        openMenu: {width: '15%'},
+        openMenu: {width: '16%'},
         closedMenu: {width: '6%'},
 
-        barsDisplay: { opacity: 1, x: 0 },
-        barsHide: { opacity: 0, x: -100 },
-        timesDisplay: { opacity: 1, x: 0 },
-        timesHide: { opacity: 0, x: -100 }
+        barsDisplay: {
+            opacity: [0, 0.2, 1],
+            x: [-100, -50, 0]},
+        barsHide: {
+            opacity: [1, 0.15, 0],
+            x: [0, -50, -100]},
+        timesDisplay: { 
+            opacity: [0, 0.15, 1],
+            x: [-100, -50, 0]},
+        timesHide: { 
+            opacity: [1, 0.2, 0],
+            x: [0, -50, -100]}
     }
 
     return(
@@ -26,6 +33,7 @@ const Nav = () => {
             style={{overflow: 'hidden'}}
             initial='closedMenu'
             animate={isNavOpen ? 'openMenu' : 'closedMenu'}
+            transition={{ duration: 0.25 }}
         >
             {/* bars icon */}
             {!isNavOpen &&
@@ -34,7 +42,7 @@ const Nav = () => {
                 style={{overflow: 'hidden'}}
                 initial={{x: -30}}
                 animate={isNavOpen ? 'barsHide' : 'barsDisplay'}
-                transition={{ duration: .3 }}
+                transition={{ duration: isNavOpen ? 0.3 : 0.45 }}
                 ></motion.i>
             }
             
@@ -46,7 +54,7 @@ const Nav = () => {
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: .6 }}
+                    transition={{ duration: isNavOpen ? 0.45 : 0.3 }}
                     ></motion.i>
 
                     <motion.ul
@@ -54,11 +62,11 @@ const Nav = () => {
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: .6 }}
+                    transition={{ duration: isNavOpen ? 0.3 : 0.6 }}
                     >
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">About Me</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li ><a onClick={changeNav} href="#">Projects</a></li>
+                        <li><a onClick={changeNav} href="#">About Me</a></li>
+                        <li><a onClick={changeNav} href="#">Contact</a></li>
                         <div className="nav-icon-container">
                             <a href='https:www.linkedin.com/in/aldair-balanzar-390185177/' target='_blank' style={{margin: '0 3%'}}>
                                 <i className="nav-icon fa fa-linkedin-square"></i>

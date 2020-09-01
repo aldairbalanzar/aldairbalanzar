@@ -1,11 +1,21 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
-const Card = ({ project, projectNum }) => {
-    console.log(project)
+const Card = ({ project, handleProjectNum, projectNum }) => {
+    const variants = {
+        focus: {width: '100%'},
+        notFocused: {width: '20%'},
+    }
     return (
-        <div className='project'>
-            <a href={project.website_url}><img src={project.img} alt={project.name}/></a>
-            <h3 className="list-title">Technologies used: </h3>
+        <motion.div className='project-card' onClick={() => {handleProjectNum(project.id)}}
+            variants={variants}
+            style={{overflow: 'hidden'}}
+            initial='notFocused'
+            animate={(projectNum === project.id) ? 'focus' : 'notFocused'}
+        >
+            <a ><img src={project.img} alt={project.name}/></a>
+            <h2>{project.name}</h2>
+            <h4 className="list-title">Technologies used: </h4>
             <ul className="list">
                 {project.technologies.map(tech => {
                     return(
@@ -13,7 +23,7 @@ const Card = ({ project, projectNum }) => {
                     )
                 })}
             </ul>
-        </div>
+        </motion.div>
     )
 }
 
