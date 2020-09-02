@@ -14,7 +14,7 @@ const Card = ({ project, handleProjectNum, projectNum }) => {
             animate={(projectNum === project.id) ? 'focus' : 'notFocused'}
         >
             <a ><img src={project.img} alt={project.name}/></a>
-            <h2>{project.name}</h2>
+            <h2 className='project-name'>{project.name}</h2>
             <h4 className="list-title">Technologies used: </h4>
             <ul className="list">
                 {project.technologies.map(tech => {
