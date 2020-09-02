@@ -12,11 +12,12 @@ export const Modal = ({ content }) => {
             <img className="aldair-persona" src={aldair_persona} alt="aldair in persona art style"/>
             <div className="speech-container" >
                 <h1>Aldair Balanzar</h1>
-                <Typist avgTypingDelay={25}>
+                <Typist avgTypingDelay={10} cursor={{ show: false }}>
                     {content.map(paragraph => {
                         return(
                             <div>
                                 <p>{paragraph}</p>
+                                <Typist.Backspace count={paragraph.length} delay={3000}/>
                             </div>
                         )
                     })}
