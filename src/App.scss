@@ -162,15 +162,15 @@
             left: 0;
             right: 0;
             z-index: 1;
-            .modal-backdrop {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            background: rgba(0, 0, 0, .8);
-            }
+            // .modal-backdrop {
+            // position: fixed;
+            // top: 0;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+            // z-index: -1;
+            // background: rgba(0, 0, 0, .8);
+            // }
             .modal-x {
                 color: white;
                 font-size: 4rem;
@@ -187,35 +187,36 @@
                 .aldair-persona {
                     position: absolute;
                     width: 440px;
-                    height: 580px;
+                    height: 600px;
                     z-index: 1;
-                    top: 400;
+                    // top: 300;
                     bottom: 0;
                     left: 100;
                     right: 0;
-                    padding: 0 0 9% 0;
+                    padding: 0 0 11% 0;
                 }
                 .speech-container {
                     box-sizing: border-box;
+                    border: 2px solid red;
                     border-radius: 9px;
                     position: relative;
-                    top: 50%;
-                    left: 50%;
+                    top: 46%;
+                    left: 54%;
                     transform: translate(-50%, -50%);
-                    height: auto;
+                    height: 180px;
                     width: 80%;
                     box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
                     z-index: 3;
-                    padding: 3%;
+                    padding: 0 2%;
                     background:  rgb(228, 228, 228);
                     h1 {
-                        font-size: 1.4rem;
+                        font-size: 1.3rem;
                         font-weight: 600;
                         text-align: left;
-                        padding: 0 0 2%;
+                        margin: 1% 0 2%;
                     }
                     p {
-                        font-size: 1.2rem;
+                        font-size: 1.1rem;
                         text-align: left;
                         a {
                             color: rgb(231, 124, 178);
