@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Nav = ({changeNav}) => {
+const Nav = ({ handleNavState, tran }) => {
 
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -48,13 +48,13 @@ const Nav = ({changeNav}) => {
             
             {/* times icon */}
             {isNavOpen &&
-                <div>  
+                <nav>  
                     <motion.i className={`menu-times fa fa-times`} onClick={handleNav}
                     variants={variants}
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: isNavOpen ? 0.45 : 0.3 }}
+                    transition={{ duration: isNavOpen ? 0.4 : 0.25 }}
                     ></motion.i>
 
                     <motion.ul
@@ -62,11 +62,11 @@ const Nav = ({changeNav}) => {
                     style={{overflow: 'hidden'}}
                     initial={{x: -30}}
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                    transition={{ duration: isNavOpen ? 0.3 : 0.6 }}
+                    transition={{ duration: isNavOpen ? 0.25 : 0.55 }}
                     >
-                        <li ><a onClick={changeNav} href="#">Projects</a></li>
-                        <li><a onClick={changeNav} href="#">About Me</a></li>
-                        <li><a onClick={changeNav} href="#">Contact</a></li>
+                        <li ><a onClick={() => {handleNavState(1)}} href="#"> Projects </a></li>
+                        <li><a onClick={() => {handleNavState(2)}} href="#"> About Me </a></li>
+                        <li><a onClick={() => {handleNavState(3)}} href="#"> Contact </a></li>
                         <div className="nav-icon-container">
                             <a href='https:www.linkedin.com/in/aldair-balanzar-390185177/' target='_blank' style={{margin: '0 3%'}}>
                                 <i className="nav-icon fa fa-linkedin-square"></i>
@@ -76,7 +76,7 @@ const Nav = ({changeNav}) => {
                             </a>
                         </div>
                     </motion.ul>
-                </div>
+                </nav>
             }
         </motion.div>
     )

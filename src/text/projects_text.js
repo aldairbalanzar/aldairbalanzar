@@ -9,7 +9,7 @@ const projects = [
         name: 'D8Picker',
         description: 'I contributed to D8Picker\'s back-end and front-end development where I implemented CRUD functionality, adjusted our database schema for more customization to our application, and tested endpoints for our test cases',
         img: d8Picker_img,
-        technologies: ['Google API', 'OAuth', 'Styled Components', 'NodeJS', 'PostgreSQL', 'Supertest'],
+        technologies: ['OAuth & Google API', 'Styled Components', 'NodeJS', 'PostgreSQL', 'Supertest'],
         website_url: 'https://www.d8picker.com/',
         github_repo: ['https://github.com/aldairbalanzar/school-calendar-fe', 'https://github.com/aldairbalanzar/school-calendar-be']
     },

@@ -2,24 +2,33 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import Cover from './components/Cover';
 import Projects from './components/Projects';
+import About from './components/About';
+import Contact from './components/Contact';
 // import Carousel from './components/Carousel';
 import './App.css';
 import './App.scss';
 
 function App() {
+  const [navState, setNavState] = useState(2)
+  const [isNavChanging, setNavIsChanging] = useState(false);
 
-  const [isNavChanging, setIsChangeNav] = useState(false);
-
-  const changeNav = () => {
-        setIsChangeNav(true)
-        setTimeout(function(){ setIsChangeNav(false) }, 740);
+  const transitionNav = () => {
+        setNavIsChanging(true)
+        setTimeout(() => { setNavIsChanging(false) }, 750);
   };
 
+  const handleNavState = (num) => {
+    transitionNav()
+    setTimeout(() => {setNavState(num)}, 751)
+  }
+
   return (
-    <div className="App">
-      <Nav changeNav={changeNav}/>
-      <Projects isNavChanging={isNavChanging}/>
-      {/* <Carousel /> */}
+    <div className="App" >
+      <Nav handleNavState={handleNavState}/>
+       <Cover isNavChanging={isNavChanging}/>
+      {navState === 1 && <Projects isNavChanging={isNavChanging} navState={navState} />}
+      {navState === 2 && <About  isNavChanging={isNavChanging} navState={navState} />}
+      {navState === 3 && <Contact  isNavChanging={isNavChanging} navState={navState} />}
     </div>
   );
 }

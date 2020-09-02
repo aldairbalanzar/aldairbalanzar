@@ -3,7 +3,8 @@ import Cover from './Cover';
 import Card from './Card';
 import projects from '../text/projects_text';
 
-    const Projects = ({ isNavChanging }) => {
+    const Projects = () => {
+
     const [projectNum, setProjectNum] = useState(0);
 
     const handleProjectNum = (projectId) => {
@@ -12,14 +13,14 @@ import projects from '../text/projects_text';
     }
 
     return (
-        <div className='projects-container'>
-            <Cover isNavChanging={isNavChanging}/>
+        <section className='projects-container'>
+            {/* {navState === 1 && <Cover isNavChanging={isNavChanging}/>} */}
             {projects.map(project => {
                 return(
                     <Card project={project} handleProjectNum={handleProjectNum} projectNum={projectNum}/>
                 )
             })}
-        </div>
+        </section>
     )
 }
 
