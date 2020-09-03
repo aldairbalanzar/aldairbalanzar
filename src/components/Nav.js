@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Nav = ({ handleNavState, tran }) => {
+const Nav = ({ handleNavState }) => {
 
     const [isNavOpen, setIsNavOpen] = useState(false);
-
+    const links = ['https://github.com/']
     const handleNav = () => {
         setIsNavOpen(!isNavOpen)
     };
@@ -64,9 +64,9 @@ const Nav = ({ handleNavState, tran }) => {
                     animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
                     transition={{ duration: isNavOpen ? 0.25 : 0.55 }}
                     >
-                        <li ><a onClick={() => {handleNavState(1)}} href="#"> Projects </a></li>
-                        <li><a onClick={() => {handleNavState(2)}} href="#"> About Me </a></li>
-                        <li><a onClick={() => {handleNavState(3)}} href="#"> Contact </a></li>
+                        <li ><a onClick={() => {handleNavState(1); setIsNavOpen(false)}}> Projects </a></li>
+                        <li><a onClick={() => {handleNavState(2); setIsNavOpen(false)}}> About Me </a></li>
+                        <li><a onClick={() => {handleNavState(3); setIsNavOpen(false)}}> Contact </a></li>
                         <div className="nav-icon-container">
                             <a href='https:www.linkedin.com/in/aldair-balanzar-390185177/' target='_blank' style={{margin: '0 3%'}}>
                                 <i className="nav-icon fa fa-linkedin-square"></i>

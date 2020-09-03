@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Cover from './Cover';
 import Card from './Card';
 import projects from '../text/projects_text';
 

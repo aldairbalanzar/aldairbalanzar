@@ -13,7 +13,7 @@ const Card = ({ project, handleProjectNum, projectNum }) => {
             initial='notFocused'
             animate={(projectNum === project.id) ? 'focus' : 'notFocused'}
         >
-            <a ><img src={project.img} alt={project.name}/></a>
+            <a href='https://github.com/'><img src={project.img} alt={project.name}/></a>
             <h2 className='project-name'>{project.name}</h2>
             <h4 className="list-title">Technologies used: </h4>
             <ul className="list">

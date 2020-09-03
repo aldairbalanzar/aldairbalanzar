@@ -1,16 +1,20 @@
+body {
+    background: #ebf2f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cfe7e3, #f4f8fa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cfd9e7, #f4f8fa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
+}
 .App {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .menu-container {
         position: fixed;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         left: 0;
         width: 20%;
         height: 100vh;
         background-color: mediumaquamarine;
-        opacity: 0.5;
         // border: solid 2px red;
 
         .menu-bars {
@@ -66,7 +70,7 @@
 
     .cover {
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         left: 0;
         width: 20%;
@@ -124,11 +128,13 @@
     }
 
     .about-container {
-        width: 70%;
+        width: 80%;
         margin: auto;
+        display: flex;
+        flex-wrap: wrap;
         .header {
             width: 100%;
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             text-align: center;
             padding: 0;
             margin: 0 10% 2% 0;
@@ -140,128 +146,70 @@
                 padding: 0;
             }
         }
-            p {
-                text-align: left;
-                width: 80%;
-                margin: 0 0 0 10%;
-                font-size: 1rem;
-                color: black;
-            }
-        
-        .contact-container {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            // border: solid 2px purple;
+
+        .aldair-persona {
+            width: 370px;
+            height: 545px;
+            top: 10%;
+            left: 71%;
+            position: absolute;
+            z-index: 1;
         }
 
-        .modal-wrapper {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1;
-            // .modal-backdrop {
-            // position: fixed;
-            // top: 0;
-            // bottom: 0;
-            // left: 0;
-            // right: 0;
-            // z-index: -1;
-            // background: rgba(0, 0, 0, .8);
-            // }
-            .modal-x {
-                color: white;
-                font-size: 4rem;
-                padding: 16% 0 0 0;
+        .container {
+            width: 86%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 1% 2%;
+            border-radius: 9px;
+            margin: 1% 0 0;
+            z-index: 0;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+            background:  rgb(228, 228, 228);
+            .speech-container {
+                .speaker {
+                    font-size: 1.8rem;
+                    margin: 0;
+                    padding: 0;
+                }
+                .speech {
+                    padding: 1% 0;
+                    margin: 0;
+                    color: purple;
+                }
             }
-            .modal {
-                position: relative;
-                top: 38%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 70%;
-                width: 94%;
-                z-index: 1;
-                .aldair-persona {
-                    position: absolute;
-                    width: 440px;
-                    height: 600px;
-                    z-index: 1;
-                    // top: 300;
-                    bottom: 0;
-                    left: 100;
-                    right: 0;
-                    padding: 0 0 11% 0;
-                }
-                .speech-container {
-                    box-sizing: border-box;
-                    border: 2px solid red;
-                    border-radius: 9px;
-                    position: relative;
-                    top: 46%;
-                    left: 54%;
-                    transform: translate(-50%, -50%);
-                    height: 180px;
-                    width: 80%;
-                    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-                    z-index: 3;
-                    padding: 0 2%;
-                    background:  rgb(228, 228, 228);
-                    h1 {
-                        font-size: 1.3rem;
-                        font-weight: 600;
-                        text-align: left;
-                        margin: 1% 0 2%;
-                    }
-                    p {
-                        font-size: 1.1rem;
-                        text-align: left;
-                        a {
-                            color: rgb(231, 124, 178);
-                            text-decoration: none;
-                            transition: 0.3s;
-                            &:hover {
-                                color: rgb(197, 19, 78);
-                                transition: 0.3s;
-                            }
-                        }
-                        .back-end-repo {
-                            color: rgb(15, 138, 117);
-                            text-decoration: none;
-                            transition: 0.3s;
-                            &:hover {
-                                color: rgb(8, 112, 116);
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-                }
+        }
+
+        .tech-container {
+            width: 70%;
+            padding: 8% 0 0;
+            display: flex;
+            justify-content: space-around;
+            font-size: 5.6rem;
+            .fa-python {
+                color: slategrey;
+                text-shadow: 3px 2px rgba(0, 0, 0, 0.3);
+            }
+            .fa-html5 {
+                color: rgb(238, 33, 6);
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+            }
+            .fa-css3-alt {
+                color: rgb(52, 141, 243);
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+            }
+            .fa-js-square {
+                color: rgb(253, 192, 23);
+                text-shadow: 3px 2px rgba(0, 0, 0, 0.3);
+            }
+            .fa-react {
+                color: rgb(57, 119, 253);
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+            }
+            .fa-node {
+                color: rgb(29, 189, 37);
+                text-shadow: 2px 0px rgba(0, 0, 0, 0.3);
             }
         }
     }
-
-    // unused carousel component styling, still experimenting
-    // .carousel {
-    //     width: 80%;
-    //     display: flex;
-    //     border: solid 2px purple;
-
-    //     .arrow {
-    //         font-size: 4rem;
-    //         padding: 5%;
-    //         &:hover {
-    //             cursor: pointer;
-    //         }
-    //     }
-    //     .project {
-    //         a {
-    //             img {
-    //                 width: 70%;
-    //                 height: 200px;
-    //             }
-    //         }
-    //     }
-    // }
 }
