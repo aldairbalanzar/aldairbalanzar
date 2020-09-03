@@ -1,4 +1,2 @@
 # ![aldair_sprite_animation](https://imgur.com/n5kqCKC.gif) About Me
 I am Full Stack Web-Developer, Aldair Balanzar, and I am a self-driven problem solver with a knack for creativity. When my focus is not programming, I enjoy spending my time indulging in :art:art, :video_game:video games, :soccer:football, :notes:trance music, or time well spent with my :family:family. 
-
-![react logo](https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png) ![javascript logo square](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png) ![python logo](https://icon2.cleanpng.com/20180320/fsw/kisspng-angle-text-symbol-brand-other-python-5ab0c09b0e3083.2363551015215330830581.jpg) ![node js logo](https://img.favpng.com/20/4/0/node-js-javascript-react-mean-angularjs-png-favpng-9jx9sihXGEqtr5xCmpXZtGFjQ.jpg)
