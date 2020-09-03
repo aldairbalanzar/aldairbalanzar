@@ -4,12 +4,11 @@ import Cover from './components/Cover';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
-// import Carousel from './components/Carousel';
 import './App.css';
 import './App.scss';
 
 function App() {
-  const [navState, setNavState] = useState(2)
+  const [navState, setNavState] = useState(1)
   const [isNavChanging, setNavIsChanging] = useState(false);
 
   const transitionNav = () => {
