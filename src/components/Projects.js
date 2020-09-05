@@ -16,7 +16,7 @@ import projects from '../text/projects_text';
             {/* {navState === 1 && <Cover isNavChanging={isNavChanging}/>} */}
             {projects.map(project => {
                 return(
-                    <Card project={project} handleProjectNum={handleProjectNum} projectNum={projectNum}/>
+                    <Card key={project.id} project={project} handleProjectNum={handleProjectNum} projectNum={projectNum}/>
                 )
             })}
         </section>
