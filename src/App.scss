@@ -85,16 +85,16 @@ body {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        padding: 4% 0 0 16%;
+        padding: 4% 0 0 10%;
         // border: solid 2px purple;
 
         .project-card {
-            background: whitesmoke;
-            width: 20%;
+            background: rgb(236, 234, 234);
+            width: 18%;
             height: auto;
             padding: 1%;
             border-radius: 5px;
-            transition: transform .3s, border .6s;
+            transition: transform .3s, border .6s, box-shadow .25s, width .25s, background .2s;
             border: 3px solid lightsteelblue;
             &:hover {
                 cursor: pointer;
@@ -104,12 +104,12 @@ body {
             a {
                 img {
                     width: 100%;
-                    height: 170px;
+                    height: 160px;
                     box-shadow: 3px 1px 5px rgba(28, 38, 73, 0.225);
                 }
             }
             .project-name {
-                margin: 3% 1%;
+                margin: 5% 1%;
                 font-size: 1.3rem;
                 width: 100%;
                 text-align: center;
@@ -126,11 +126,11 @@ body {
         }
         .selected-card {
             background: whitesmoke;
-            width: 20%;
+            width: 21%;
             height: auto;
             padding: 1%;
             border-radius: 5px;
-            transition: transform .3s, border .6s;
+            transition: transform .3s, border .6s, box-shadow .25s, width .25s, background .2s;
             border: 3px solid slateblue;
             &:hover {
                 cursor: pointer;
@@ -140,12 +140,12 @@ body {
             a {
                 img {
                     width: 100%;
-                    height: 170px;
+                    height: 160px;
                     box-shadow: 3px 1px 5px rgba(28, 38, 73, 0.225);
                 }
             }
             .project-name {
-                margin: 3% 1%;
+                margin: 5% 1%;
                 font-size: 1.4rem;
                 width: 100%;
                 text-align: center;
