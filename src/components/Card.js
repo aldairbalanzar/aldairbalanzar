@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Card = ({ project, handleProjectNum, projectNum }) => {
+const Card = ({ project, handleProjectNum, projectNum, wooshSound }) => {
     const divVariants = {
         hidden: { y: -50, opacity: 0 },
         display: { y: 0, opacity: 1 },
@@ -13,7 +13,9 @@ const Card = ({ project, handleProjectNum, projectNum }) => {
         display: { height: 400 }
     }
     return (
-        <motion.div className={projectNum === project.id ? 'selected-card' : 'project-card'} onClick={() => {handleProjectNum(project.id)}}
+        <motion.div className={projectNum === project.id ? 'selected-card' : 'project-card'} 
+        onClick={() => {handleProjectNum(project.id)}}
+        onMouseEnter={() => {wooshSound()}}
         variants={projectVariants}
         initial= 'hidden'
         animate={ projectNum === project.id ? 'display' : 'hidden'}
