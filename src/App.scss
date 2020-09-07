@@ -89,11 +89,15 @@ body {
         // border: solid 2px purple;
 
         .project-card {
+            background: whitesmoke;
+            width: 20%;
+            height: auto;
+            padding: 1%;
             border-radius: 5px;
-            transition: .3s;
-            border: 3px solid plum;
+            transition: transform .3s, border .6s;
+            border: 3px solid lightsteelblue;
             &:hover {
-                // cursor: pointer;
+                cursor: pointer;
                 transform: scale(1.04);
                 box-shadow: 10px 8px 5px rgba(28, 38, 73, 0.225);
             }
@@ -110,20 +114,52 @@ body {
                 width: 100%;
                 text-align: center;
             }
-            .focused {
-                height: auto;
+            .tech {
+                padding: 0 3%;
                 h4 {
-                    width: 100%;
                     text-align: left;
-                    margin: 0 0 0 4%;
                 }
-                .list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    li {
-                        width: 100%;
-                    }
+                .tech-list {
+                    text-align: left;
+                }
+            }
+        }
+        .selected-card {
+            background: whitesmoke;
+            width: 20%;
+            height: auto;
+            padding: 1%;
+            border-radius: 5px;
+            transition: transform .3s, border .6s;
+            border: 3px solid slateblue;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.04);
+                box-shadow: 10px 8px 5px rgba(28, 38, 73, 0.225);
+            }
+            a {
+                img {
+                    width: 100%;
+                    height: 170px;
+                    box-shadow: 3px 1px 5px rgba(28, 38, 73, 0.225);
+                }
+            }
+            .project-name {
+                margin: 3% 1%;
+                font-size: 1.4rem;
+                width: 100%;
+                text-align: center;
+            }
+            .tech {
+                text-align: center;
+                h4 {
+                    text-align: center;
+                    margin: 6% 0 3%;
+                }
+                .tech-list {
+                    text-align: left;
+                    border: green;
+                    margin: 0;
                 }
             }
         }
