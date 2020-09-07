@@ -2,33 +2,44 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Card = ({ project, handleProjectNum, projectNum }) => {
-    const variants = {
-        // focus: {width: '100%'},
-        notFocused: {width: '20%'},
+    const divVariants = {
+        hidden: { y: -50, opacity: 0 },
+        display: { y: 0, opacity: 1 },
+        exit: { y: -10, opacity: 0 }
+    }
+
+    const projectVariants = {
+        hidden: { height: 220},
+        display: { height: 400 }
     }
     return (
-        <motion.div className='project-card' onClick={() => {handleProjectNum(project.id)}}
-            variants={variants}
-            style={{overflow: 'hidden'}}
-            initial='notFocused'
-            // animate={(projectNum === project.id) ? 'focus' : 'notFocused'}
+        <motion.div className={projectNum === project.id ? 'selected-card' : 'project-card'} onClick={() => {handleProjectNum(project.id)}}
+        variants={projectVariants}
+        initial= 'hidden'
+        animate={ projectNum === project.id ? 'display' : 'hidden'}
+        exit= 'exit'
+        transition={projectNum === project.id ? {} : { delay: .2 }}
+        >
+            <a href='https://github.com/'><img src={project.img} alt={project.name}/></a>
+            <h2 className='project-name'>{project.name}</h2>
+            
+            <AnimatePresence>
+            <motion.div className='tech'
+            variants={divVariants}
+            initial= 'hidden'
+            animate={ projectNum === project.id ? 'display' : 'hidden'}
+            exit= 'exit'
             >
-                <a href='https://github.com/'><img src={project.img} alt={project.name}/></a>
-                <h2 className='project-name'>{project.name}</h2>
-                <AnimatePresence>
-                    {projectNum === project.id &&
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
-                            <h4 className="list-title">Technologies used: </h4>
-                            <ul className="list">
-                                {project.technologies.map(tech => {
-                                    return(
-                                        <li key={tech}>{tech}</li>
-                                    )
-                                })}
-                            </ul>
-                        </motion.div>
-                    }
-                </AnimatePresence>
+                <h4>Technologies used: </h4>
+                <ul className='tech-list'>
+                    {project.technologies.map(tech => {
+                        return(
+                            <li key={tech}>{tech}</li>
+                        )
+                    })}
+                </ul>
+            </motion.div>
+            </AnimatePresence>
         </motion.div>
     )
 }

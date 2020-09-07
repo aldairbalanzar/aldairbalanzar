@@ -14,17 +14,17 @@ const Nav = ({ handleNavState }) => {
         closedMenu: {width: '6%'},
 
         barsDisplay: {
-            opacity: [0, 0.2, 1],
-            x: [-100, -50, 0]},
+            opacity: [0, 1],
+            x: [-100, 0]},
         barsHide: {
-            opacity: [1, 0.15, 0],
-            x: [0, -50, -100]},
+            opacity: [1, 0],
+            x: [0, -100]},
         timesDisplay: { 
-            opacity: [0, 0.15, 1],
-            x: [-100, -50, 0]},
+            opacity: [0, 1],
+            x: [-100, 0]},
         timesHide: { 
-            opacity: [1, 0.2, 0],
-            x: [0, -50, -100]}
+            opacity: [1, 0],
+            x: [0, -100]}
     }
 
     return(
@@ -66,7 +66,7 @@ const Nav = ({ handleNavState }) => {
                         style={{overflow: 'hidden'}}
                         initial={{x: -30}}
                         animate={isNavOpen ? 'timesDisplay' : 'timesHide'}
-                        transition={{ duration: isNavOpen ? 0.25 : 0.55 }}
+                        transition={{ delay: 0.15 }}
                         >
                             <li ><a onClick={() => {handleNavState(1); setIsNavOpen(false)}}> Projects </a></li>
                             <li><a onClick={() => {handleNavState(2); setIsNavOpen(false)}}> About Me </a></li>
